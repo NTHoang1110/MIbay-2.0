@@ -2,6 +2,14 @@
     "java.project.sourcePaths": ["src"],
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
-        "lib/**/*.jar"
+        "lib/**/*.jar",
+        "c:\\Users\\tinho\\OneDrive\\Desktop\\Projects\\JavaFX_Source\\javafx-sdk-23.0.1\\lib\\javafx.base.jar",
+        "c:\\Users\\tinho\\OneDrive\\Desktop\\Projects\\JavaFX_Source\\javafx-sdk-23.0.1\\lib\\javafx.controls.jar",
+        "c:\\Users\\tinho\\OneDrive\\Desktop\\Projects\\JavaFX_Source\\javafx-sdk-23.0.1\\lib\\javafx.fxml.jar",
+        "c:\\Users\\tinho\\OneDrive\\Desktop\\Projects\\JavaFX_Source\\javafx-sdk-23.0.1\\lib\\javafx.graphics.jar",
+        "c:\\Users\\tinho\\OneDrive\\Desktop\\Projects\\JavaFX_Source\\javafx-sdk-23.0.1\\lib\\javafx.media.jar",
+        "c:\\Users\\tinho\\OneDrive\\Desktop\\Projects\\JavaFX_Source\\javafx-sdk-23.0.1\\lib\\javafx.swing.jar",
+        "c:\\Users\\tinho\\OneDrive\\Desktop\\Projects\\JavaFX_Source\\javafx-sdk-23.0.1\\lib\\javafx.web.jar",
+        "c:\\Users\\tinho\\OneDrive\\Desktop\\Projects\\JavaFX_Source\\javafx-sdk-23.0.1\\lib\\javafx-swt.jar"
     ]
 }

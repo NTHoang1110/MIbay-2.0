@@ -1,47 +1,38 @@
 package Application;
 
-import javafx.animation.AnimationTimer;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+
+import Bussiness.Auction;
+import Bussiness.Bid;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 
 public class MainApp extends Application {
+    public static final int CLIPORT = 12345;
+    public static final String BROADCAST_ADDRESS = "255.255.255.255";
+    public static final int BROADCAST_PORT = 6000;
+    public static final Map<String, Auction> auctions = new ConcurrentHashMap<>();
+    public static final Map<String, Bid> bids = new ConcurrentHashMap<>();
+    private static int balance;
+
     @Override
     public void start(Stage primaryStage) {
+
         Pane root = new Pane();
         Scene scene = new Scene(root, 600, 400);
-
-        Circle circle = new Circle(20, Color.BLUE);
-        circle.setCenterX(50);
-        circle.setCenterY(200);
-        root.getChildren().add(circle);
-
-        AnimationTimer timer = new AnimationTimer() {
-            private long lastUpdate = 0;
-            private double speed = 300; // Pixels per second
-
-            @Override
-            public void handle(long now) {
-                if (lastUpdate > 0) {
-                    double deltaTime = (now - lastUpdate) / 1_000_000_000.0; // Convert nanoseconds to seconds
-                    circle.setCenterX(circle.getCenterX() + speed * deltaTime);
-                }
-                lastUpdate = now;
-
-                // Reset position when it reaches the end
-                if (circle.getCenterX() > 600) {
-                    circle.setCenterX(50);
-                }
-            }
-        };
-        timer.start();
-
-        primaryStage.setTitle("AnimationTimer Example");
         primaryStage.setScene(scene);
         primaryStage.show();
+    }
+
+    public static int getBalance(){
+        return balance;
+    }
+
+    public static void setBalance(int newBalance){
+        balance = newBalance;
     }
 
     public static void main(String[] args) {

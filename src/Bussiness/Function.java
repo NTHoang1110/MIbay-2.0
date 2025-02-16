@@ -6,6 +6,11 @@ import java.time.LocalTime;
 import Application.MainApp;
 
 public class Function {
+
+    public Function(){
+        requestListener.start();
+    }
+
     static Thread requestListener = new Thread(() -> {
         try (DatagramSocket requestSocket = new DatagramSocket(MainApp.BROADCAST_PORT)) {
             String fileNameWon = null;

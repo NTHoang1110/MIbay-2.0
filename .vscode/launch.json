@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "example",
+            "request": "launch",
+            "mainClass": "Application.example",
+            "projectName": "MIbay 2.0_84159690"
+        },
+        {
+            "type": "java",
             "name": "MainApp",
             "request": "launch",
             "vmArgs": "--module-path /Users/tinho/OneDrive/Desktop/Projects/JavaFX_Source/javafx-sdk-23.0.1/lib --add-modules javafx.controls",

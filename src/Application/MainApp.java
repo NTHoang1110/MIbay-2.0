@@ -5,6 +5,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import Bussiness.Auction;
 import Bussiness.Bid;
+import Bussiness.Function;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
@@ -20,7 +21,7 @@ public class MainApp extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-
+        Function engine = new Function();
         Pane root = new Pane();
         Scene scene = new Scene(root, 600, 400);
         primaryStage.setScene(scene);

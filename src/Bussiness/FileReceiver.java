@@ -15,10 +15,10 @@ public class FileReceiver {
                 Socket socket = serverSocket.accept();
                 DataInputStream dis = new DataInputStream(socket.getInputStream())) {
 
-            String fileName = dis.readUTF(); // Receive file name
-            long fileSize = dis.readLong(); // Receive file size
+            String fileName = dis.readUTF();
+            long fileSize = dis.readLong();
 
-            File receivedFile = new File("received_" + fileName);
+            File receivedFile = new File(fileName);
             try (FileOutputStream fos = new FileOutputStream(receivedFile)) {
                 byte[] buffer = new byte[1024];
                 int bytesRead;

@@ -90,11 +90,11 @@ public class Function {
                             MainApp.bids.get(fileNameWon).won = true;
                             priceWon = MainApp.bids.get(fileNameWon).bid;
                         }
+                        receiveFile();
                         break;
 
                     case "Geld":
                         MainApp.setBalance(MainApp.getBalance() + Integer.parseInt(requestParts[1]));
-                        ;
                         System.out.println("Geld erhalten: " + requestParts[1]);
                         break;
 
@@ -409,6 +409,7 @@ public class Function {
     }
 
     public static void receiveFile() {
-        
+        FileReceiver receiver = new FileReceiver();
+        receiver.receive();
     }
 }

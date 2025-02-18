@@ -11,9 +11,11 @@ public class MainAuctionController {
     Button abbrechen;
 
     MainAuctionView mainView;
+    Function engine;
 
     public MainAuctionController(Function engine) {
         mainView = new MainAuctionView();
+        this.engine = engine;
 
         this.anbieten = mainView.anbieten;
         this.bieten = mainView.bieten;
